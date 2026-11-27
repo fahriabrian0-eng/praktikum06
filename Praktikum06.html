@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Praktikum JavaScript</title>
+</head>
+<body>
+    <h2>Praktikum Basic JavaScript</h2>
+    <p>Lihat hasil melalui Console (F12).</p>
+
+    <script>
+        // 1. OUTPUT, VARIABEL, DAN TIPE DATA
+
+        const nama = "Fahri";
+        let umur = 19;
+        let nilai = 85;
+        let aktif = true;
+
+        console.log("Nama:", nama);
+        console.log("Umur:", umur);
+        console.log("Nilai:", nilai);
+        console.log("Status aktif:", aktif);
+        console.log("Tipe nilai:", typeof nilai);
+
+
+        // 2. OPERATOR DAN PERHITUNGAN SEDERHANA
+
+        const tugas = 80;
+        const uts = 75;
+        const uas = 90;
+
+        const akhir = tugas * 0.30 + uts * 0.30 + uas * 0.40;
+
+        console.log("Nilai akhir:", akhir);
+        console.log("Lulus:", akhir >= 60);
+
+
+        // 3. PERCABANGAN IF, ELSE IF, ELSE
+
+        const nilaiPercabangan = 78;
+        let kategori;
+
+        if (nilaiPercabangan >= 85) {
+            kategori = "A";
+        } else if (nilaiPercabangan >= 70) {
+            kategori = "B";
+        } else if (nilaiPercabangan >= 60) {
+            kategori = "C";
+        } else {
+            kategori = "D";
+        }
+
+        console.log("Nilai:", nilaiPercabangan);
+        console.log("Kategori:", kategori);
+
+
+        // 4. PERULANGAN DAN FUNGSI DASAR
+
+        function hitungDiskon(harga, persen) {
+            return harga - (harga * persen / 100);
+        }
+
+        for (let i = 1; i <= 3; i++) {
+            const harga = i * 10000;
+            const bayar = hitungDiskon(harga, 10);
+
+            console.log("Barang", i, "Harga:", harga, "Bayar:", bayar);
+        }
+
+
+        // 5. PRAKTIKUM MANDIRI PENGOLAH NILAI MAHASISWA
+
+        const namaMahasiswa = "Fahri Abrian Herdiansyah";
+        const nilaiTugas = 80;
+        const nilaiUTS = 70;
+        const nilaiUAS = 90;
+
+        const nilaiAkhir = nilaiTugas * 0.30 +
+                           nilaiUTS * 0.30 +
+                           nilaiUAS * 0.40;
+
+        let status;
+
+        if (nilaiAkhir >= 60) {
+            status = "LULUS";
+        } else {
+            status = "TIDAK LULUS";
+        }
+
+        console.log("Nama mahasiswa:", namaMahasiswa);
+        console.log("Nilai akhir:", nilaiAkhir);
+        console.log("Status kelulusan:", status);
+
+    </script>
+</body>
+</html>
